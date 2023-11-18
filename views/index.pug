@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+    each item in messages
+      each val, key in item
+        li= key.charAt(0).toUpperCase() + key.slice(1) + ': ' + val
+      br
+
+  br
+  a(href="/new")
+    button Add new message 
